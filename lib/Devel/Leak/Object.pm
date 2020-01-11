@@ -7,7 +7,7 @@ use strict qw{ vars subs };
 use Carp         ();
 use Scalar::Util ();
 
-our $VERSION = '1.02';
+our $VERSION = '1.03';
 
 use base 'Exporter';
 our @EXPORT_OK   = qw(track bless status checkpoint);
