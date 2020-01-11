@@ -164,7 +164,7 @@ sub make_next {
 		my @queue = ();
 		while ( my $c = shift @stack ) {
 			next if $seen{$c}++;
-		
+
 			# Does the class have it's own DESTROY method
 			my $has_destroy = $DESTROY_STUBBED{$c}
 				? !! exists $DESTROY_ORIGINAL{$c}
@@ -197,10 +197,10 @@ sub checkpoint {
 		next unless $OBJECT_COUNT{$_}; # Don't list class with count zero
 		$OBJECT_COUNT_CHECKPOINT{$_} ||= 0;
 		next unless ($OBJECT_COUNT{$_} > $OBJECT_COUNT_CHECKPOINT{$_});
-		
+
 		print STDERR "checkpoint:\n" unless ($first++);;
 		printf STDERR "\t%-40s %d\n", $_, $OBJECT_COUNT{$_}-$OBJECT_COUNT_CHECKPOINT{$_};
-		
+
 		$OBJECT_COUNT_CHECKPOINT{$_} = $OBJECT_COUNT{$_};
 	}
 }
@@ -243,7 +243,7 @@ __END__
 
 =head1 NAME
 
-Devel::Leak::Object - Detect leaks of objects 
+Devel::Leak::Object - Detect leaks of objects
 
 =head1 SYNOPSIS
 
@@ -251,7 +251,7 @@ Devel::Leak::Object - Detect leaks of objects
   use Devel::Leak::Object;
   my $obj = Foo::Bar->new;
   Devel::Leak::Object::track($obj);
-  
+
   # Track every object
   use Devel::Leak::Object qw{ GLOBAL_bless };
 
