@@ -1,5 +1,8 @@
 Revision history for Perl module Devel-Leak-Object
 
+{{$NEXT}}
+        - converted packaging to Dist::Zilla
+
 1.01      2010-06-16
 	- Upgraded to Module::Install::DSL 0.99
 	- warn rather than die for objects that don't conform to our assumptions

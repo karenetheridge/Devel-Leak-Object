@@ -1,0 +1,6 @@
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/Devel-Leak-Object-*/
+/Devel-Leak-Object-*.tar.gz

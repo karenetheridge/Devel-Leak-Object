@@ -1,4 +1,5 @@
 package Devel::Leak::Object;
+# ABSTRACT: Detect leaks of objects
 
 use 5.005;
 # We abuse refs a LOT
@@ -240,10 +241,7 @@ END {
 
 __END__
 
-
-=head1 NAME
-
-Devel::Leak::Object - Detect leaks of objects
+=pod
 
 =head1 SYNOPSIS
 
@@ -285,33 +283,14 @@ Setting the global variable $Devel::Leak::Object::TRACKSOURCELINES makes the
 report at the end include where (filename and line number) each leaked object
 originates (or where call to the ::new is made).
 
-=head1 BUGS
-
-Please report bugs to http://rt.cpan.org
-
-=head1 AUTHOR
-
-Adam Kennedy <adamk@cpan.org>
-
-With some additional contributions from David Cantrell E<lt>david@cantrell.org.ukE<gt>
-and Sven Dowideit <svendowideit@home.org.au>
-
 =head1 SEE ALSO
 
 L<Devel::Leak>
 
 =head1 COPYRIGHT
 
-Copyright 2007 - 2010 Adam Kennedy.
-
 Rewritten from original copyright 2004 Ivor Williams.
 
 Some documentation also copyright 2004 Ivor Williams.
-
-This program is free software; you can redistribute
-it and/or modify it under the same terms as Perl itself.
-
-The full text of the license can be found in the
-LICENSE file included with this module.
 
 =cut

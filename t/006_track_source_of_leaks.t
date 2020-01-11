@@ -20,7 +20,7 @@ FOO
      1 from t/tracksource.pl line: 8
 }, "can track a single leak to its source");
 
-system(qq{ $^X -Ilib t/tracksource2.pl 2> $temp });
+system(qq{ $^X -Ilib -I. t/tracksource2.pl 2> $temp });
 open(FILE, $temp) || die("Can't read $temp\n");
 undef $/;
 $data = <FILE>;
