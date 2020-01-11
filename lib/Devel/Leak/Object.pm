@@ -6,26 +6,19 @@ use strict qw{ vars subs };
 use Carp         ();
 use Scalar::Util ();
 
-use vars qw{ @ISA @EXPORT_OK };
-use vars qw{ %OBJECT_COUNT %TRACKED %DESTROY_ORIGINAL %DESTROY_STUBBED %DESTROY_NEXT %IGNORE_CLASS %OBJECT_COUNT_CHECKPOINT };
-
 our $VERSION = '1.02';
 
-BEGIN {
-	# Set up exports
-	require Exporter;
-	@ISA         = qw(Exporter);
-	@EXPORT_OK   = qw(track bless status checkpoint);
+use base 'Exporter';
+our @EXPORT_OK   = qw(track bless status checkpoint);
 
-	# Set up state storage (primary for clarity)
-	%OBJECT_COUNT     = ();
-	%OBJECT_COUNT_CHECKPOINT     = ();
-	%TRACKED          = ();
-	%DESTROY_ORIGINAL = ();
-	%DESTROY_STUBBED  = ();
-	%DESTROY_NEXT     = ();
-	%IGNORE_CLASS     = ();
-}
+# Set up state storage (primary for clarity)
+our %OBJECT_COUNT     = ();
+our %OBJECT_COUNT_CHECKPOINT     = ();
+our %TRACKED          = ();
+our %DESTROY_ORIGINAL = ();
+our %DESTROY_STUBBED  = ();
+our %DESTROY_NEXT     = ();
+our %IGNORE_CLASS     = ();
 
 sub import {
 	my $class  = shift;
