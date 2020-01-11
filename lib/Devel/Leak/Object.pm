@@ -6,11 +6,12 @@ use strict qw{ vars subs };
 use Carp         ();
 use Scalar::Util ();
 
-use vars qw{ $VERSION @ISA @EXPORT_OK };
+use vars qw{ @ISA @EXPORT_OK };
 use vars qw{ %OBJECT_COUNT %TRACKED %DESTROY_ORIGINAL %DESTROY_STUBBED %DESTROY_NEXT %IGNORE_CLASS %OBJECT_COUNT_CHECKPOINT };
-BEGIN {
-	$VERSION     = '1.01';
 
+our $VERSION = '1.02';
+
+BEGIN {
 	# Set up exports
 	require Exporter;
 	@ISA         = qw(Exporter);
