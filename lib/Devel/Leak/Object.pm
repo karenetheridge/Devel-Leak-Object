@@ -260,7 +260,7 @@ __END__
 =head1 DESCRIPTION
 
 This module provides tracking of objects, for the purpose of detecting memory
-leaks due to circular references or innappropriate caching schemes.
+leaks due to circular references or inappropriate caching schemes.
 
 Object tracking can be enabled on a per object basis. Any objects
 thus tracked are remembered until DESTROYed; details of any objects
