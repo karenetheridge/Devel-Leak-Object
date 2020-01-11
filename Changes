@@ -2,6 +2,7 @@ Revision history for Perl module Devel-Leak-Object
 
 {{$NEXT}}
         - converted packaging to Dist::Zilla
+        - fix tests to avoid conflicts with other installed modules (RT#131249)
 
 1.01      2010-06-16
 	- Upgraded to Module::Install::DSL 0.99
